@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "tieu_de": "Bài viết năm mới nhiều người yêu",
+      "noi_dung": "nhiều người yêu không bị đánh ghen",
+      "tac_gia": "Nguyễn Đức Anh",
+      "the_loai": "3",
+      "ngay_dang": "2024-02-16",
+      "id": 3
+    },
+    {
+      "tieu_de": "Bài viết 1234 haha hihi",
+      "noi_dung": "Hôm nay đã lên HN chưa",
+      "tac_gia": "Nguyễn Anh",
+      "the_loai": "1",
+      "ngay_dang": "2024-02-09",
+      "id": 4
+    }
+  ]
+}

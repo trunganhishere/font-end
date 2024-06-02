@@ -1,0 +1,34 @@
+<h1 class="text-center">{{title}}</h1>
+<a href="#!/post/add" class="btn btn-success">Thêm bài viết</a>
+<table class="table table-striped table-hover">
+    <thead>
+    <th>STT</th>
+    <th>Tiêu đề</th>
+    <th>Nội dung</th>
+    <th>Tác giả</th>
+    <th>Thể loại</th>
+    <th>Ngày đăng</th>
+    <th>Thao tác</th>
+    </thead>
+    <tbody ng-repeat="post in listPost">
+    <tr>
+        <td>{{$index+1}}</td>
+        <td>{{post.tieu_de}}</td>
+        <td>{{post.noi_dung}}</td>
+        <td>{{post.tac_gia}}</td>
+        <td ng-if="post.the_loai == 1">Tin tức</td>
+        <td ng-if="post.the_loai == 2">Truyện ngắn</td>
+        <td ng-if="post.the_loai == 3">Tiểu thuyết</td>
+        <td>{{post.ngay_dang}}</td>
+        <td>
+            <a href="#!/edit/post/{{post.id}}">
+                <button class="btn btn-warning" type="button">Sửa</button>
+            </a>
+            <button class="btn btn-danger" type="button" ng-click="deletePost(post.id)">Xóa</button>
+            <a href="#!/detail/post/{{post.id}}">
+                <button class="btn btn-info" type="button">Chi tiết</button>
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>

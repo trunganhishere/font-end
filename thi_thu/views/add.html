@@ -1,0 +1,31 @@
+<h1 class="text-center">{{title}}</h1>
+
+<form action="" ng-submit="addPost()">
+    <div class="mb-3">
+        <label for="tieu_de" class="form-label">Tiêu đề</label>
+        <input type="text" ng-model="post.tieu_de" class="form-control" id="tieu_de">
+        <span ng-if="test.test_tieu_de" class="text-danger">Vui lòng nhập tiêu đề</span>
+    </div>
+    <div class="mb-3">
+        <label for="noi_dung" class="form-label">Nội dung</label>
+        <input type="text" ng-model="post.noi_dung" class="form-control" id="noi_dung">
+    </div>
+    <div class="mb-3">
+        <label for="tac_gia" class="form-label">Tác giả</label>
+        <input type="text" ng-model="post.tac_gia" class="form-control" id="tac_gia">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Thể loại</label>
+        <select class="form-select" aria-label="Default select example" ng-model="post.the_loai">
+            <option selected>-Chọn thể loại</option>
+            <option value="1">Tin tức</option>
+            <option value="2">Truyện ngắn</option>
+            <option value="3">Tiểu thuyết</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="ngay_dang" class="form-label">Ngày đăng</label>
+        <input type="date" ng-model="post.ngay_dang" class="form-control" id="ngay_dang">
+    </div>
+    <button class="btn btn-success" type="submit">Thêm bài viết</button>
+</form>
